@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Simple portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Build complete - static files ready'",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "portfolio",
+    "website"
+  ],
+  "author": "",
+  "license": "MIT"
+}
