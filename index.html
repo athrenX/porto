@@ -102,7 +102,410 @@
     </footer>
 
     <!-- Data and Script -->
-    <script src="data.js"></script>
-    <script src="app.js"></script>
+    <script>
+// Personal Information
+const personalInfo = {
+    name: 'Athala Angwyn Renaldi',
+    role: 'Software Engineer | Backend Developer',
+    bio: 'Lulusan Teknologi Informasi dengan fokus pada Software Engineering, Backend Development, dan Keamanan Sistem. Berpengalaman dalam membangun RESTful API skala enterprise menggunakan .NET, mengembangkan alat automasi, serta menciptakan ekosistem aplikasi cross-platform. Tersertifikasi ISO 27001:2022 Lead Auditor.',
+    email: 'angwynren@gmail.com',
+    github: 'https://github.com/athrenX',
+    linkedin: 'https://linkedin.com/in/athala-angwyn-renaldi',
+};
+
+// Projects
+const projects = [
+    {
+        title: 'Integrated Online Ticketing Ecosystem',
+        description: 'Ekosistem pemesanan tiket komprehensif berbasis Web dan Mobile. Mengatasi masalah double-booking dengan implementasi Database Transaction Locking untuk menangani traffic tinggi.',
+        image: 'https://via.placeholder.com/600x400/1e293b/3b82f6?text=Ticketing+System',
+        techStack: ['Laravel', 'Flutter', 'MySQL', 'REST API', 'Real-time Sync'],
+        github: 'https://github.com/athrenX/ticketing-system',
+        live: '',
+    },
+    {
+        title: 'Website Vulnerability Scanner',
+        description: 'Aplikasi web untuk melakukan scanning kerentanan pada website untuk mendeteksi backdoor dan celah keamanan. Dikembangkan untuk Diskominfo Purwakarta.',
+        image: 'https://via.placeholder.com/600x400/1e293b/3b82f6?text=Security+Scanner',
+        techStack: ['Laravel 11', 'PHP', 'JavaScript', 'MySQL'],
+        github: 'https://github.com/AthrenX/Web-Scanning',
+        live: '',
+    },
+    {
+        title: 'Smart Biopond System',
+        description: 'Sistem automasi IoT untuk kontrol lingkungan budidaya maggot. Backend API memproses streaming data sensor DHT22 secara real-time dan memicu automasi perangkat keras.',
+        image: 'https://via.placeholder.com/600x400/1e293b/3b82f6?text=IoT+Biopond',
+        techStack: ['ESP32', 'C++', 'RESTful API', 'MQTT', 'IoT'],
+        github: 'https://github.com/athrenX/smart-biopond',
+        live: '',
+    },
+    {
+        title: 'Kedai Es Bar 79 - Digital Ordering Platform',
+        description: 'Platform pemesanan digital berbasis web dengan Merchant Dashboard terintegrasi dan Automated QR Code Generator untuk sistem scan-to-order yang efisien.',
+        image: 'https://via.placeholder.com/600x400/1e293b/3b82f6?text=Digital+Ordering',
+        techStack: ['Laravel', 'MySQL', 'QR Code', 'JavaScript'],
+        github: '',
+        live: '',
+    },
+    {
+        title: 'Website Travel Java',
+        description: 'Aplikasi web untuk pemesanan berbagai destinasi wisata di Pulau Jawa dengan sistem booking terintegrasi.',
+        image: 'https://via.placeholder.com/600x400/1e293b/3b82f6?text=Travel+Website',
+        techStack: ['Java', 'HTML', 'CSS', 'JavaScript', 'Netbeans'],
+        github: 'https://github.com/AthrenX/Website-travel-java',
+        live: '',
+    },
+    {
+        title: 'App Catalog API (.NET Core)',
+        description: 'API terpusat untuk katalog aplikasi di Mandiri Inhealth, terintegrasi dengan dashboard React.js. Termasuk sistem automasi untuk generate dokumen LOA dalam PDF.',
+        image: 'https://via.placeholder.com/600x400/1e293b/3b82f6?text=App+Catalog+API',
+        techStack: ['.NET Core', 'React.js', 'SQL Server', 'PDF Generation'],
+        github: '',
+        live: '',
+    },
+];
+
+// Work Experience
+const experiences = [
+    {
+        role: 'Asisten Praktikum Laboratorium',
+        company: 'Telkom University',
+        startDate: 'Sep 2025',
+        endDate: '',
+        current: true,
+        responsibilities: [
+            'Pemrograman Web: Membimbing mahasiswa dalam pengembangan aplikasi web menggunakan PHP, Laravel, dan MySQL. Menjelaskan konsep MVC dan debugging kode',
+            'Jaringan Komputer: Mengajarkan konfigurasi jaringan, subnetting, dan routing menggunakan Cisco Packet Tracer',
+            'Bertanggung jawab atas evaluasi tugas, pelaksanaan ujian praktikum, dan memberikan feedback teknis',
+        ],
+    },
+    {
+        role: 'Freelance Full-Stack Developer',
+        company: 'Kedai Es Bar 79',
+        startDate: 'Oct 2025',
+        endDate: 'Dec 2025',
+        current: false,
+        responsibilities: [
+            'Membangun platform pemesanan digital berbasis web menggunakan Laravel dari nol',
+            'Mengembangkan Merchant Dashboard terintegrasi untuk tracking inventaris dan pendapatan real-time',
+            'Mengembangkan fitur Automated QR Code Generator untuk sistem scan-to-order',
+            'Meminimalisir kesalahan pesanan saat jam sibuk dengan sistem yang lebih efisien',
+        ],
+    },
+    {
+        role: 'Application Development Intern',
+        company: 'Mandiri Inhealth',
+        startDate: 'Jun 2025',
+        endDate: 'Sep 2025',
+        current: false,
+        responsibilities: [
+            'Backend Developer di Departemen Pengembangan Aplikasi',
+            'Merancang dan mengembangkan App Catalog API menggunakan .NET Core terintegrasi dengan React.js',
+            'Mengembangkan sistem automasi backend untuk generate dokumen LOA dalam PDF, memangkas waktu proses 40%',
+            'Berkolaborasi dengan tim lintas divisi untuk migrasi data dari sistem legacy dengan aman',
+        ],
+    },
+    {
+        role: 'Cyber Security Intern',
+        company: 'Diskominfo Purwakarta',
+        startDate: 'Jan 2025',
+        endDate: 'Mar 2025',
+        current: false,
+        responsibilities: [
+            'Menganalisis website Purwakarta yang rentan terhadap serangan backdoor dan judi online',
+            'Membuat aplikasi website pendeteksi kerentanan untuk mendeteksi potensi backdoor',
+            'Merancang sistem pemindaian otomatis terhadap celah keamanan pada situs web',
+            'Memberikan rekomendasi dan dokumentasi hasil analisis keamanan kepada tim IT Diskominfo',
+        ],
+    },
+];
+
+// Certificates
+const certificates = [
+    {
+        name: 'ISO/IEC 27001:2022 Lead Auditor',
+        issuer: 'Mastermind Assurance',
+        date: 'Dec 2025',
+        credentialId: 'Valid until Dec 2028',
+        credentialUrl: '',
+    },
+    {
+        name: 'ISO 27001:2022 Lead Auditor Training',
+        issuer: 'Cisometry Academy',
+        date: 'Sep 2025',
+        credentialId: '',
+        credentialUrl: '',
+    },
+    {
+        name: 'Offensive Security Training',
+        issuer: 'Cisometry Academy',
+        date: 'Sep 2025',
+        credentialId: '',
+        credentialUrl: '',
+    },
+    {
+        name: 'SOC Analyst Training',
+        issuer: 'PT Media Telekomunikasi Mandiri (MTM)',
+        date: 'Sep 2025',
+        credentialId: '',
+        credentialUrl: '',
+    },
+    {
+        name: 'Application Development Internship',
+        issuer: 'Mandiri Inhealth',
+        date: 'Sep 2025',
+        credentialId: '',
+        credentialUrl: '',
+    },
+    {
+        name: 'Cyber Security Internship',
+        issuer: 'Diskominfo Purwakarta',
+        date: 'Mar 2025',
+        credentialId: '',
+        credentialUrl: '',
+    },
+    {
+        name: 'Asisten Praktikum Pemrograman Web',
+        issuer: 'Telkom University',
+        date: 'Jan 2026',
+        credentialId: '',
+        credentialUrl: '',
+    },
+    {
+        name: 'Asisten Praktikum Jaringan Komputer',
+        issuer: 'Telkom University',
+        date: 'Jan 2026',
+        credentialId: '',
+        credentialUrl: '',
+    },
+];
+
+// Initialize the portfolio
+document.addEventListener('DOMContentLoaded', function() {
+    updatePersonalInfo();
+    renderProjects();
+    renderExperience();
+    renderCertificates();
+    setupSmoothScroll();
+    setupIntersectionObserver();
+    document.getElementById('year').textContent = new Date().getFullYear();
+});
+
+function updatePersonalInfo() {
+    document.getElementById('name').textContent = personalInfo.name;
+    document.getElementById('role').textContent = personalInfo.role;
+    document.getElementById('bio').textContent = personalInfo.bio;
+    document.getElementById('footer-name').textContent = personalInfo.name;
+    document.title = `${personalInfo.name} - Portfolio`;
+    
+    const socialLinksHTML = [];
+    
+    if (personalInfo.github) {
+        socialLinksHTML.push(`
+            <a href="${personalInfo.github}" target="_blank" rel="noopener noreferrer" 
+               class="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+        `);
+    }
+    
+    if (personalInfo.linkedin) {
+        socialLinksHTML.push(`
+            <a href="${personalInfo.linkedin}" target="_blank" rel="noopener noreferrer"
+               class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+        `);
+    }
+    
+    if (personalInfo.email) {
+        socialLinksHTML.push(`
+            <a href="mailto:${personalInfo.email}"
+               class="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        `);
+    }
+    
+    document.getElementById('social-links').innerHTML = socialLinksHTML.join('');
+}
+
+function renderProjects() {
+    const container = document.getElementById('projects-container');
+    
+    const projectsHTML = projects.map(project => `
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+            ${project.image ? `
+                <div class="relative h-48 overflow-hidden bg-gray-700">
+                    <img src="${project.image}" 
+                         alt="${project.title}"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                </div>
+            ` : ''}
+
+            <div class="p-6">
+                <h3 class="text-2xl font-bold text-white mb-3">
+                    ${project.title}
+                </h3>
+
+                <p class="text-gray-300 mb-4">
+                    ${project.description}
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                    ${project.techStack.map(tech => `
+                        <span class="text-xs bg-blue-900/30 text-blue-300 px-3 py-1 rounded-full">
+                            ${tech}
+                        </span>
+                    `).join('')}
+                </div>
+
+                <div class="flex gap-4">
+                    ${project.github ? `
+                        <a href="${project.github}" target="_blank" rel="noopener noreferrer"
+                           class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-github"></i>
+                            <span class="text-sm">Code</span>
+                        </a>
+                    ` : ''}
+
+                    ${project.live ? `
+                        <a href="${project.live}" target="_blank" rel="noopener noreferrer"
+                           class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span class="text-sm">Live Demo</span>
+                        </a>
+                    ` : ''}
+                </div>
+            </div>
+        </div>
+    `).join('');
+    
+    container.innerHTML = projectsHTML;
+}
+
+function renderExperience() {
+    const container = document.getElementById('experience-container');
+    
+    const experienceHTML = experiences.map(exp => `
+        <div class="mb-12 relative pl-8 border-l-2 border-blue-500">
+            <div class="absolute -left-3 top-0 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-800"></div>
+
+            <div class="bg-gray-900 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-1">
+                            ${exp.role}
+                        </h3>
+                        <div class="flex items-center gap-2 text-blue-400 mb-2">
+                            <i class="fas fa-briefcase"></i>
+                            <span class="font-semibold">${exp.company}</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 text-gray-400 text-sm">
+                        <i class="far fa-calendar"></i>
+                        <span>
+                            ${exp.startDate} - ${exp.current ? 'Present' : exp.endDate}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="text-gray-300">
+                    <ul class="list-disc list-inside space-y-2">
+                        ${exp.responsibilities.map(resp => `<li>${resp}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    `).join('');
+    
+    container.innerHTML = experienceHTML;
+}
+
+function renderCertificates() {
+    const container = document.getElementById('certificates-container');
+    
+    const certificatesHTML = certificates.map(cert => `
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all hover:scale-105 border border-gray-700">
+            <div class="flex items-start gap-4">
+                <div class="bg-blue-900/30 p-3 rounded-lg">
+                    <i class="fas fa-award text-blue-400 text-2xl"></i>
+                </div>
+
+                <div class="flex-1">
+                    <h3 class="text-lg font-bold text-white mb-2">
+                        ${cert.name}
+                    </h3>
+
+                    <p class="text-blue-400 font-semibold mb-3">
+                        ${cert.issuer}
+                    </p>
+
+                    <div class="flex items-center gap-2 text-gray-400 text-sm mb-4">
+                        <i class="far fa-calendar"></i>
+                        <span>${cert.date}</span>
+                    </div>
+
+                    ${cert.credentialId ? `
+                        <p class="text-xs text-gray-500 mb-3">
+                            ID: ${cert.credentialId}
+                        </p>
+                    ` : ''}
+
+                    ${cert.credentialUrl ? `
+                        <a href="${cert.credentialUrl}" target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>View Credential</span>
+                        </a>
+                    ` : ''}
+                </div>
+            </div>
+        </div>
+    `).join('');
+    
+    container.innerHTML = certificatesHTML;
+}
+
+function setupSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+function setupIntersectionObserver() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+}
+    </script>
 </body>
 </html>
