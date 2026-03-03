@@ -4,9 +4,9 @@ $personalInfo = [
     'name' => 'Your Name',
     'role' => 'Software Engineer',
     'bio' => 'Building elegant solutions to complex problems. Passionate about creating exceptional user experiences and scalable applications.',
-    'email' => 'your.email@example.com',
-    'github' => 'https://github.com/yourusername',
-    'linkedin' => 'https://linkedin.com/in/yourusername',
+    'email' => 'angwynren@gmail.com',
+    'github' => 'https://github.com/athrenX',
+    'linkedin' => 'https://www.linkedin.com/in/athala-angwyn-renaldi-91b22a294/?originalSubdomain=id://linkedin.com/in/yourusername',
 ];
 
 // Projects
